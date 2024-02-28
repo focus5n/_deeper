@@ -1,6 +1,8 @@
 package pointcut.beans;
 
-public class BreadBean {
+import pointcut.annotations.SimpleAnnotationRequired;
+
+public class BreadBean implements TestBean {
 
     public void eatChocoBread() {
         System.out.println(":::::: Eat a Choco Bread! ::::::");
@@ -12,6 +14,11 @@ public class BreadBean {
 
     public void eatCheeseBread() {
         System.out.println(":::::: Eat a Cheese Bread! ::::::");
+    }
+
+    @SimpleAnnotationRequired
+    public void eatBreadWithMilk(ChocoBean chocoBean)  {
+        System.out.println("I eat choco with : " + chocoBean.drinkMilk());
     }
 
     public void sleep() {

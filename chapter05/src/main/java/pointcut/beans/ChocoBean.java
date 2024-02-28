@@ -9,4 +9,8 @@ public class ChocoBean implements BasicBean {
     public void milk() {
         System.out.println("Invoked milk()");
     }
+
+    public String drinkMilk() {
+        return "milk!";
+    }
 }
