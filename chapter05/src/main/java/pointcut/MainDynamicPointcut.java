@@ -1,8 +1,8 @@
-package dynamicPointcut;
+package pointcut;
 
-import dynamicPointcut.advices.SimpleAdvice;
-import dynamicPointcut.beans.SimpleBean;
-import dynamicPointcut.pointcuts.SimpleDynamicPointcut;
+import pointcut.advices.SimpleAdvice;
+import pointcut.beans.ChocoBean;
+import pointcut.pointcuts.SimpleDynamicPointcut;
 import org.springframework.aop.Advisor;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
@@ -17,13 +17,13 @@ public class MainDynamicPointcut {
         Advisor advisor = new DefaultPointcutAdvisor(pointcut, advice);
 
         // 타겟, 어드바이저 => 프록시팩토리
-        SimpleBean target = new SimpleBean();
+        ChocoBean target = new ChocoBean();
         ProxyFactory proxyFactory = new ProxyFactory();
         proxyFactory.addAdvisor(advisor);
         proxyFactory.setTarget(target);
 
         // 프록시팩토리 => 프록시
-        SimpleBean proxy = (SimpleBean) proxyFactory.getProxy();
+        ChocoBean proxy = (ChocoBean) proxyFactory.getProxy();
         proxy.choco(10);
         proxy.choco(100);
         proxy.choco(1000);

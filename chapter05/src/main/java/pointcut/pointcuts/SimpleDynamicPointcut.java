@@ -1,6 +1,6 @@
-package dynamicPointcut.pointcuts;
+package pointcut.pointcuts;
 
-import dynamicPointcut.beans.SimpleBean;
+import pointcut.beans.ChocoBean;
 import org.springframework.aop.ClassFilter;
 import org.springframework.aop.support.DynamicMethodMatcherPointcut;
 
@@ -10,7 +10,7 @@ public class SimpleDynamicPointcut extends DynamicMethodMatcherPointcut {
 
     @Override
     public ClassFilter getClassFilter() {
-        return tmpClass -> tmpClass == SimpleBean.class;
+        return tmpClass -> tmpClass == ChocoBean.class;
     }
 
     @Override
