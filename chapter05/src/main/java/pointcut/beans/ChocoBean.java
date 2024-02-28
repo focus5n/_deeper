@@ -1,6 +1,6 @@
 package pointcut.beans;
 
-public class ChocoBean implements BasicBean {
+public class ChocoBean implements SimpleBean {
 
     public void choco(int x) {
         System.out.println("Invoked choco() with : " + x);

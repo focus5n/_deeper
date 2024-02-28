@@ -1,6 +1,6 @@
 package pointcut.beans;
 
-public interface TestBean {
+public interface EaterBean {
 
     void eatChocoBread();
 

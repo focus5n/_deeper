@@ -2,7 +2,7 @@ package pointcut.beans;
 
 import pointcut.annotations.SimpleAnnotationRequired;
 
-public class BreadBean implements TestBean {
+public class BreadBean implements EaterBean {
 
     public void eatChocoBread() {
         System.out.println(":::::: Eat a Choco Bread! ::::::");
