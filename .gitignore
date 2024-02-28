@@ -1,0 +1,17 @@
+# gitIgnore List
+
+## Idea
+.idea
+*.iml
+
+## Gradle
+.gradle
+gradlew
+gradlew.bat
+
+## Package
+*.jar
+
+## Generated
+build
+*.class
