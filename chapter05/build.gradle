@@ -14,21 +14,27 @@ repositories {
 }
 
 ext {
+
+    // SpringBoot
     bootVersion = '3.2.3'
     bootWebVersion = '3.2.3'
     bootActuatorVersion = '3.2.3'
     bootAopVersion = '3.2.3'
 
-    aspectjWeaver = '1.8.14'
-    aspectjRuntimeVersion = '1.8.14'
+    // AspectJ
+    aspectjWeaver = '1.9.21'
+    aspectjRuntimeVersion = '1.9.21'
 }
 
 dependencies {
+
+    // SpringBoot
     implementation "org.springframework.boot:spring-boot-starter:$bootVersion"
     implementation "org.springframework.boot:spring-boot-starter-web:$bootWebVersion"
     implementation "org.springframework.boot:spring-boot-starter-actuator:$bootActuatorVersion"
     implementation "org.springframework.boot:spring-boot-starter-aop:$bootAopVersion"
 
+    // AspectJ
     runtimeOnly "org.aspectj:aspectjweaver:$aspectjWeaver"
     runtimeOnly "org.aspectj:aspectjrt:$aspectjRuntimeVersion"
 }
