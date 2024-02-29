@@ -24,6 +24,12 @@ ext {
     // AspectJ
     aspectjWeaver = '1.9.21'
     aspectjRuntimeVersion = '1.9.21'
+
+    // Lombok
+    lombokVersion = '1.18.30'
+
+    // Logback
+    logbackVersion = '1.5.0'
 }
 
 dependencies {
@@ -37,4 +43,10 @@ dependencies {
     // AspectJ
     runtimeOnly "org.aspectj:aspectjweaver:$aspectjWeaver"
     runtimeOnly "org.aspectj:aspectjrt:$aspectjRuntimeVersion"
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+
+    // Logback
+    testImplementation "ch.qos.logback:logback-classic:$logbackVersion"
 }
