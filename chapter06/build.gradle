@@ -21,6 +21,7 @@ ext {
     bootActuatorVersion = '3.2.3'
     bootAopVersion = '3.2.3'
     bootJdbcVersion = '3.2.3'
+    bootTestVersion = '3.2.3'
 
     // AspectJ
     aspectjWeaver = '1.9.21'
@@ -58,4 +59,8 @@ dependencies {
 
     // MySql
     implementation "com.mysql:mysql-connector-j:$mySqlVersion"
+
+    // Test
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$bootTestVersion"
+
 }
