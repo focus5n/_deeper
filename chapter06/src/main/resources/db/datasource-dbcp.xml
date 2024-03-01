@@ -10,11 +10,13 @@
                            http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+          class="org.apache.commons.dbcp2.BasicDataSource"
+          destroy-method="close"
           p:driverClassName="${jdbc.driverClassName}"
           p:url="${jdbc.url}"
           p:username="${jdbc.userName}"
           p:password="${jdbc.password}"/>
 
     <context:property-placeholder location="classpath:db/jdbc.properties" />
+
 </beans>

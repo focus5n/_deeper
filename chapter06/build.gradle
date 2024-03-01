@@ -45,6 +45,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-actuator:$bootActuatorVersion"
     implementation "org.springframework.boot:spring-boot-starter-aop:$bootAopVersion"
     implementation "org.springframework.boot:spring-boot-starter-jdbc:$bootJdbcVersion"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$bootTestVersion"
 
     // AspectJ
     runtimeOnly "org.aspectj:aspectjweaver:$aspectjWeaver"
@@ -60,7 +61,7 @@ dependencies {
     // MySql
     implementation "com.mysql:mysql-connector-j:$mySqlVersion"
 
-    // Test
-    testImplementation "org.springframework.boot:spring-boot-starter-test:$bootTestVersion"
+    // Connection Pool
+    implementation 'org.apache.commons:commons-dbcp2:2.11.0'
 
 }
