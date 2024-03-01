@@ -1,10 +1,11 @@
-package C06_02_with_mysql.entity;
+package C06_with_mysql.entity;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class Singer implements Serializable {
     private Long id;
     private String firstName;
     private String lastName;
-    private String birthDate;
+    private Date birthDate;
     private List<Album> albums;
 
     public boolean addAlbum(Album album) {

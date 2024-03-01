@@ -20,6 +20,7 @@ ext {
     bootWebVersion = '3.2.3'
     bootActuatorVersion = '3.2.3'
     bootAopVersion = '3.2.3'
+    bootJdbcVersion = '3.2.3'
 
     // AspectJ
     aspectjWeaver = '1.9.21'
@@ -30,6 +31,9 @@ ext {
 
     // Logback
     logbackVersion = '1.5.0'
+
+    // MySql
+    mySqlVersion = '8.3.0';
 }
 
 dependencies {
@@ -39,6 +43,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web:$bootWebVersion"
     implementation "org.springframework.boot:spring-boot-starter-actuator:$bootActuatorVersion"
     implementation "org.springframework.boot:spring-boot-starter-aop:$bootAopVersion"
+    implementation "org.springframework.boot:spring-boot-starter-jdbc:$bootJdbcVersion"
 
     // AspectJ
     runtimeOnly "org.aspectj:aspectjweaver:$aspectjWeaver"
@@ -46,7 +51,11 @@ dependencies {
 
     // Lombok
     compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
     // Logback
     testImplementation "ch.qos.logback:logback-classic:$logbackVersion"
+
+    // MySql
+    implementation "com.mysql:mysql-connector-j:$mySqlVersion"
 }

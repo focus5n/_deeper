@@ -1,6 +1,6 @@
-package C06_02_with_mysql.dao;
+package C06_with_mysql.dao;
 
-import C06_02_with_mysql.entity.Singer;
+import C06_with_mysql.entity.Singer;
 
 import java.util.List;
 
@@ -16,6 +16,7 @@ public interface SingerDao {
 
     void insert(Singer singer);
     void update(Singer singer);
-    void delete(Singer singer);
+    void delete(Long singerId);
     void insertWithAlbum(Singer singer);
+
 }

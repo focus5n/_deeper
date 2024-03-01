@@ -1,4 +1,4 @@
-package C06_02_with_mysql.entity;
+package C06_with_mysql.entity;
 
 import lombok.Getter;
 import lombok.Setter;
