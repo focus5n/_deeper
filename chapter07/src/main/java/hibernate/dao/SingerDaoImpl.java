@@ -38,10 +38,9 @@ public class SingerDaoImpl implements SingerDao {
 
     @Transactional(readOnly = true)
     public List<Singer> findAll() {
-        String sql = "select * from Singer";
+        String sql = "select s from Singer s";
         return entityManager.createQuery(sql).getResultList();
     }
-
 
 
     @Override
