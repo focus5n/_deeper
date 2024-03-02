@@ -4,4 +4,5 @@ rootProject.name = 'spring'
 // Module
 include 'chapter05'
 include 'chapter06'
+include 'chapter07'
 
