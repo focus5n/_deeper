@@ -49,6 +49,14 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-data-jpa:$bootJpaVersion"
     testImplementation "org.springframework.boot:spring-boot-starter-test:$bootTestVersion"
 
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache
+    implementation 'org.hibernate:hibernate-ehcache:5.6.15.Final'
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+    implementation 'org.hibernate:hibernate-entitymanager:5.6.15.Final'
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+    implementation 'org.hibernate:hibernate-validator:8.0.1.Final'
+
+
     // AspectJ
     runtimeOnly "org.aspectj:aspectjweaver:$aspectjWeaver"
     runtimeOnly "org.aspectj:aspectjrt:$aspectjRuntimeVersion"
