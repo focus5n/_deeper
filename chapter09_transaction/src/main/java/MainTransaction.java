@@ -27,5 +27,6 @@ public class MainTransaction {
 
         // 활용
         // TransactionStatus abcd = platformTransactionManager.getTransaction(new TransactionDefinition definition);
+        //
     }
 }
