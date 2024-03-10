@@ -1,19 +1,74 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
 }
 
-group 'org.example'
-version 'unspecified'
-
 repositories {
+    mavenLocal()
     mavenCentral()
+    maven { url "https://repo.spring.io/release" }
+    maven { url "https://repo.spring.io/snapshot" }
+    maven { url "https://repo.spring.io/libs-snapshot" }
+    maven { url "https://repo.spring.io/milestone" }
+    maven { url "https://repo.spring.io/libs-milestone" }
+}
+
+ext {
+
+    // SpringBoot
+    bootVersion = '3.2.3'
+    bootWebVersion = '3.2.3'
+    bootActuatorVersion = '3.2.3'
+    bootAopVersion = '3.2.3'
+    bootJdbcVersion = '3.2.3'
+    bootJpaVersion = '3.2.3'
+    bootTestVersion = '3.2.3'
+
+    // AspectJ
+    aspectjWeaver = '1.9.21'
+    aspectjRuntimeVersion = '1.9.21'
+
+    // Lombok
+    lombokVersion = '1.18.30'
+
+    // Logback
+    logbackVersion = '1.5.0'
+
+    // MySql
+    mySqlVersion = '8.3.0'
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-}
 
-test {
-    useJUnitPlatform()
+    // SpringBoot
+    implementation "org.springframework.boot:spring-boot-starter:$bootVersion"
+    implementation "org.springframework.boot:spring-boot-starter-web:$bootWebVersion"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:$bootActuatorVersion"
+    implementation "org.springframework.boot:spring-boot-starter-aop:$bootAopVersion"
+    implementation "org.springframework.boot:spring-boot-starter-jdbc:$bootJdbcVersion"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:$bootJpaVersion"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$bootTestVersion"
+
+    // Hibernate
+    implementation 'org.hibernate:hibernate-ehcache:5.6.15.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.6.15.Final'
+    implementation 'org.hibernate:hibernate-validator:8.0.1.Final'
+
+    // AspectJ
+    runtimeOnly "org.aspectj:aspectjweaver:$aspectjWeaver"
+    runtimeOnly "org.aspectj:aspectjrt:$aspectjRuntimeVersion"
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    // Logback
+    testImplementation "ch.qos.logback:logback-classic:$logbackVersion"
+
+    // MySql
+    implementation "com.mysql:mysql-connector-j:$mySqlVersion"
+
+    // Connection Pool
+    implementation 'org.apache.commons:commons-dbcp2:2.11.0'
+
 }
